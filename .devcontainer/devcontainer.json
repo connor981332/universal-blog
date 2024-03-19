@@ -1,6 +1,0 @@
-{
-    "name": "Universal Blog",
-    "dockerComposeFile": "./compose.yaml",
-    "service": "dev-container",
-    "workspaceFolder": "/workspace"
-}
