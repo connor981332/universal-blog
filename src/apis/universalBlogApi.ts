@@ -1,6 +1,6 @@
 import { httpGet, httpPost } from '../utils/HttpClient';
 
-const universalBlogApiHost = 'localhost:3000';
+const universalBlogApiHost = 'http://localhost:3001';
 
 export const getRecentPosts = async (pageNumber: number, pageSize: number) => {
     return await httpGet(`${universalBlogApiHost}/posts/recent?pageNumber=${pageNumber}&pageSize=${pageSize}`);

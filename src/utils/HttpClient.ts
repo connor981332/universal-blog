@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const httpGet = async (url: string) => {
     return await axios.get(url);
