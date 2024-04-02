@@ -1,7 +1,12 @@
 import axios from 'axios';
 
 export const httpGet = async (url: string) => {
-    return await axios.get(url);
+    try {
+        return await axios.get(url);
+    } catch (error) {
+        console.error('Could not get', url);
+        throw error;
+    }
 }
 
 export const httpPost = async (url: string, data: any) => {
