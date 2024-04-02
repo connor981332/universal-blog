@@ -11,7 +11,7 @@ export const getRecentPostsByCategory = async (category: string, pageNumber: num
 }
 
 export const getCategories = async () => {
-
+    return await httpGet(`${universalBlogApiHost}/categories`);
 }
 
 export const submitPost = async () => {

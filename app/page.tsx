@@ -1,6 +1,7 @@
 'use server';
-import Header from '../components/header';
-import NavBar from '../components/navbar';
+import Header from '../components/Header';
+import NavBar from '../components/NavBar/NavBar';
+import PostPreview from '../components/PostPreview';
 import * as universalBlogAPI from '../src/apis/universalBlogApi';
 
 export default async function Page() {
@@ -8,5 +9,12 @@ export default async function Page() {
     return <>
         <Header/>
         <NavBar/>
+        <PostPreview/>
+        <PostPreview/>
+        <PostPreview/>
+        <PostPreview/>
+        <PostPreview/>
+        <PostPreview/>
+        <PostPreview/>
     </>
 }
