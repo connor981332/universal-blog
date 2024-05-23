@@ -12,7 +12,9 @@ RUN apk upgrade
 RUN apk add nodejs npm
 WORKDIR /app/universal-blog
 COPY ./app ./app
+COPY ./components ./components
 COPY ./public ./public
+COPY ./src ./src
 COPY ./next-env.d.ts ./next-env.d.ts
 COPY ./package.json ./package.json
 COPY ./package-lock.json ./package-lock.json

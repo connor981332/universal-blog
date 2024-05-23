@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const httpGet = async (url: string) => {
     try {
-        return await axios.get(url);
+        return await fetch(url, { cache: 'no-store' })
     } catch (error) {
         console.error('Could not get', url);
         throw error;

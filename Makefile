@@ -10,5 +10,6 @@ build:
 push:
 	docker push $(IMAGE_REPO)/$(PROJECT_NAME):$(IMAGE_TAG)
 
-start:
-	docker run -d -p $(HOST_PORT):$(CONTAINER_PORT) --name $(PROJECT_NAME) $(IMAGE_REPO)/$(PROJECT_NAME):$(IMAGE_TAG)
+deploy: build push
+	kubectl apply -f ./kubernetes/deployment.yaml
+	kubectl rollout restart deployment connor-bunch-blog
