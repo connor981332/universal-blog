@@ -24,7 +24,7 @@ kind: Service
 metadata:
   name: connor-bunch-blog
   annotations:
-    metallb.universe.tf/loadBalancerIPs: 192.168.51.1
+    metallb.universe.tf/loadBalancerIPs: 10.0.3.101
 spec:
   selector:
     app: connor-bunch-blog
